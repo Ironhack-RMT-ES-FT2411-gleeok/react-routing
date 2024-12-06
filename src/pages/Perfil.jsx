@@ -11,7 +11,12 @@ function Perfil() {
   // buscar un usuario por su nombre dentro del array de allUsers
 
   const foundUser = allUsers.find((eachUser) => {
-    return eachUser.username === parametrosDinamicos.nombreDeUsuario
+    if (eachUser.id === parametrosDinamicos.uId) {
+      return true // lo consegui, deja de buscar y retorna ese
+    } else {
+      return false // no lo consegui, sigue buscando
+    }
+    // return eachUser.id === parametrosDinamicos.uId
   })
   console.log(foundUser)
 

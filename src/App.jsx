@@ -36,13 +36,13 @@ function App() {
 
       <Routes>
         {/* aqui estarian organizados todos los accesos (URL) de la página. funciona como un condicional */}
-
+        
         <Route path="/" element={  <Home /> }/>
         <Route path="/contactanos" element={  <Contact /> }/>
         <Route path="/about/staff" element={  <About /> }/>
         <Route path="/my-profile" element={ <MyProfile data={userProfile}/> }/>
         <Route path="/all-users" element={  <AllUsers /> }/>
-        <Route path="/profile/:nombreDeUsuario" element={  <Perfil /> }/>
+        <Route path="/profile/:uId" element={  <Perfil /> }/>
         {/* parametro dinamico es una cajita que almacenará CUALQUIER valor que tenga el url en esa posición */}
 
         <Route path="*" element={  <NotFound /> }/>
